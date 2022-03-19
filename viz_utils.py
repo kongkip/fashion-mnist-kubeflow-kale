@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from kale.sdk import step
 
+
 @step(name="plot_results")
 def plot_results(history, epochs):
     """
@@ -32,6 +33,7 @@ def plot_results(history, epochs):
 
     _viz_acc()
     _viz_loss()
+
 
 @step(name="plot_predictions")
 def plot_predictions(model, test_data, class_names):
