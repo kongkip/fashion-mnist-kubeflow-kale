@@ -1,6 +1,6 @@
 from kale.sdk import pipeline
 
-from dataset import Dataset, load_data
+from dataset import Dataset
 from evaluate import evaluate
 from model import get_model
 from train import train
