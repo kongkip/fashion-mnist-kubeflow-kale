@@ -1,6 +1,6 @@
 from kale.sdk import pipeline
 
-from dataset import Dataset
+from dataset import Dataset, load_data
 from evaluate import evaluate
 from model import get_model
 from train import train
@@ -14,8 +14,8 @@ def ml_pipeline(epochs):
     """
 
     # load data
-    dataset = Dataset()
-    train_data, test_data = dataset.load_data()
+    # dataset = Dataset()
+    train_data, test_data, class_names = load_data()
 
     # get the model
     model = get_model()
@@ -28,7 +28,7 @@ def ml_pipeline(epochs):
 
     # plot results and predictions
     plot_results(history, epochs=EPOCHS)
-    plot_predictions(trained_model, test_data, dataset.class_names)
+    plot_predictions(trained_model, test_data, class_names)
 
 
 if __name__ == '__main__':
