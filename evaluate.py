@@ -1,5 +1,6 @@
 from kale.sdk import step
 
+
 @step(name="model_evaluation")
 def evaluate(model, test_data):
     validation_acc_loss = model.evaluate(test_data)
