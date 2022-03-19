@@ -14,20 +14,20 @@ def ml_pipeline(epochs):
     """
 
     # load data
-    # dataset = Dataset()
-    train_data, test_data, class_names = load_data()
+    dataset = Dataset()
+    train_data, test_data, class_names = dataset.load_data()
 
     # get the model
     model = get_model()
 
     # train the model
-    trained_model, history = train(model, train_data, test_data, epochs=EPOCHS)
+    trained_model, history = train(model, train_data, test_data, epochs=epochs)
 
     # evaluate the model
     evaluate(trained_model, test_data)
 
     # plot results and predictions
-    plot_results(history, epochs=EPOCHS)
+    plot_results(history, epochs=epochs)
     plot_predictions(trained_model, test_data, class_names)
 
 
