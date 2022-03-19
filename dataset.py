@@ -18,7 +18,7 @@ class Dataset:
         return image / 255.0, label
 
     @step(name="data_loading")
-    def load_data(self):
+    def load_data(self, buffer_size=1000):
         """
         Load the fashion dataset and map it to tensorflow datasets for easier processing.
         :return:
