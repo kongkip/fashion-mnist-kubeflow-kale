@@ -1,4 +1,3 @@
-from multiprocessing.reduction import steal_handle
 import tensorflow as tf
 from kale.sdk import step
 
