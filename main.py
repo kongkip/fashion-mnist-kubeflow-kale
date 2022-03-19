@@ -18,7 +18,7 @@ def ml_pipeline(epochs=10):
     # train_data, test_data, class_names = dataset.load_data()
 
     # get the model
-    model = get_model(input_shape=(28, 28))
+    model = get_model(input_shapes=(28, 28))
 
     # train the model
     # trained_model, history = train(model, train_data, test_data, epochs=epochs)
