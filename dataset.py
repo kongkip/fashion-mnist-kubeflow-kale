@@ -27,11 +27,11 @@ class Dataset:
         train = tf.data.Dataset.from_tensors((train_images, train_labels))
         test = tf.data.Dataset.from_tensors((test_images, test_labels))
 
-        train = train.map(self.normalize, num_parallel_calls=tf.data.AUTOTUNE)\
+        train = train.map(self.normalize, num_parallel_calls=tf.data.AUTOTUNE) \
             .shuffle(self.buffer_size)
         test = test.map(self.normalize, num_parallel_calls=tf.data.AUTOTUNE)
 
         class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
-                                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
+                       'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
         return train, test, class_names
