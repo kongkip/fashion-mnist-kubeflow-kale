@@ -8,7 +8,7 @@ from viz_utils import plot_results, plot_predictions
 
 
 @pipeline(name="fashion-mnist-classification", experiment="fashion-mnist")
-def ml_pipeline(epochs):
+def ml_pipeline(epochs=10):
     """
     run the kubeflow pipeline
     """
